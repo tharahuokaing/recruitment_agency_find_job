@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Jobs | Huokaing Thara Recruitment Agency</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Kantumruy+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="navbar">
+        <div class="logo-container">
+            <div class="logo-icon">
+                <img src="recruitment_logo.jpg" alt="Huokaing Thara Recruitment" onerror="this.src='https://via.placeholder.com/44?text=HT'">
+            </div>
+            <div class="logo-text">
+                <h1 data-km="ភ្នាក់ងារជ្រើសរើសពលករ ហួកាំងថារ៉ា" data-en="Huokaing Thara Recruitment">ភ្នាក់ងារជ្រើសរើសពលករ ហួកាំងថារ៉ា</h1>
+                <span data-km="ប្រព័ន្ធស្វែងរកការងារ និងដាក់ពាក្យ" data-en="Job Search & Candidate Matching Portal">ប្រព័ន្ធស្វែងរកការងារ និងដាក់ពាក្យ</span>
+            </div>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#search-section" class="active" data-km="ស្វែងរកការងារ" data-en="Find Jobs">ស្វែងរកការងារ</a>
+            <a href="#saved-section" data-km="ការងារបានរក្សាទុក (<span id='saved-count'>0</span>)" data-en="Saved Jobs (<span id='saved-count'>0</span>)">ការងារបានរក្សាទុក (<span id="saved-count">0</span>)</a>
+            <a href="#register-cv" data-km="ផ្ញើ CV ទុក" data-en="Drop Your CV">ផ្ញើ CV ទុក</a>
+        </nav>
+
+        <div class="header-actions">
+            <button id="lang-toggle" class="lang-btn">
+                🌐 <span id="lang-text">English</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Search Hero Header -->
+    <section class="search-hero" id="search-section">
+        <div class="hero-container">
+            <h2 data-km="ស្វែងរកឱកាសការងារដែលស័ក្តិសមនឹងអ្នក" data-en="Discover Career Opportunities Suited For You">ស្វែងរកឱកាសការងារដែលស័ក្តិសមនឹងអ្នក</h2>
+            <p data-km="ស្វែងរកតាមជំនាញ ទីតាំង ឬប្រាក់បៀវត្សរ៍ នៅក្នុងព្រះរាជាណាចក្រកម្ពុជា" data-en="Search by keyword, location, or salary range across Cambodia">ស្វែងរកតាមជំនាញ ទីតាំង ឬប្រាក់បៀវត្សរ៍ នៅក្នុងព្រះរាជាណាចក្រកម្ពុជា</p>
+
+            <!-- Comprehensive Search Bar -->
+            <div class="search-box-card">
+                <div class="input-group">
+                    <span class="icon">🔍</span>
+                    <input type="text" id="keyword-input" placeholder="ចំណងជើងការងារ, ជំនាញ..." data-km-placeholder="ចំណងជើងការងារ, ជំនាញ..." data-en-placeholder="Job title, skills, keywords...">
+                </div>
+
+                <div class="input-group">
+                    <span class="icon">📍</span>
+                    <select id="location-select">
+                        <option value="all" data-km="គ្រប់ទីតាំង" data-en="All Locations">គ្រប់ទីតាំង</option>
+                        <option value="Phnom Penh" data-km="ភ្នំពេញ" data-en="Phnom Penh">ភ្នំពេញ</option>
+                        <option value="Siem Reap" data-km="សៀមរាប" data-en="Siem Reap">សៀមរាប</option>
+                        <option value="Preah Sihanouk" data-km="ព្រះសីហនុ" data-en="Preah Sihanouk">ព្រះសីហនុ</option>
+                        <option value="Remote" data-km="ធ្វើការពីផ្ទះ (Remote)" data-en="Remote Work">ធ្វើការពីផ្ទះ (Remote)</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <span class="icon">💼</span>
+                    <select id="category-select">
+                        <option value="all" data-km="គ្រប់វិស័យ" data-en="All Categories">គ្រប់វិស័យ</option>
+                        <option value="Customer Service" data-km="សេវាកម្មអតិថិជន" data-en="Customer Service">សេវាកម្មអតិថិជន</option>
+                        <option value="Entertainment" data-km="សិល្បៈ & កម្សាន្ត" data-en="Entertainment / Media">សិល្បៈ & កម្សាន្ត</option>
+                        <option value="Education" data-km="អប់រំ & ភាសា" data-en="Education / Teaching">អប់រំ & ភាសា</option>
+                        <option value="IT" data-km="បច្ចេកវិទ្យាព័ត៌មាន" data-en="Information Technology">បច្ចេកវិទ្យាព័ត៌មាន</option>
+                        <option value="Banking" data-km="ធនាគារ & ហិរញ្ញវត្ថុ" data-en="Banking & Finance">ធនាគារ & ហិរញ្ញវត្ថុ</option>
+                    </select>
+                </div>
+
+                <button id="search-btn" class="btn btn-gold" data-km="ស្វែងរក" data-en="Search">ស្វែងរក</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Portal Content -->
+    <main class="main-container">
+        
+        <!-- Sidebar Filters -->
+        <aside class="sidebar-filters">
+            <div class="filter-card">
+                <h3 data-km="តម្រងបន្ថែម" data-en="Refine Search">តម្រងបន្ថែម</h3>
+                
+                <div class="filter-group">
+                    <label data-km="ប្រភេទការងារ" data-en="Job Type">ប្រភេទការងារ</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" value="Full-time" class="type-filter" checked> <span data-km="ពេញម៉ោង (Full-time)" data-en="Full-time">ពេញម៉ោង</span></label>
+                        <label><input type="checkbox" value="Part-time" class="type-filter" checked> <span data-km="ក្រៅម៉ោង (Part-time)" data-en="Part-time">ក្រៅម៉ោង</span></label>
+                        <label><input type="checkbox" value="Contract" class="type-filter" checked> <span data-km="កិច្ចសន្យា (Contract)" data-en="Contract">កិច្ចសន្យា</span></label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label data-km="ប្រាក់បៀវត្សរ៍អប្បបរមា" data-en="Minimum Salary ($USD)">ប្រាក់បៀវត្សរ៍អប្បបរមា</label>
+                    <input type="range" id="salary-range" min="200" max="3000" step="100" value="200">
+                    <div class="range-val"><span id="salary-val">$200</span>+</div>
+                </div>
+
+                <button id="reset-filters" class="btn btn-sm btn-outline-dark" data-km="កំណត់ឡើងវិញ" data-en="Reset Filters">កំណត់ឡើងវិញ</button>
+            </div>
+        </aside>
+
+        <!-- Listings Column -->
+        <section class="results-column">
+            <div class="results-header">
+                <span id="results-count-text">0 positions found</span>
+                <div class="toggle-view">
+                    <button id="show-all-btn" class="view-tab active" data-km="ការងារទាំងអស់" data-en="All Jobs">ការងារទាំងអស់</button>
+                    <button id="show-saved-btn" class="view-tab" data-km="បានរក្សាទុក" data-en="Saved">បានរក្សាទុក</button>
+                </div>
+            </div>
+
+            <!-- Dynamic Job Cards Container -->
+            <div id="job-cards-container" class="cards-stack">
+                <!-- Javascript injects cards here -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Quick Drop CV Banner / Section -->
+    <section class="drop-cv-section" id="register-cv">
+        <div class="cv-card">
+            <div class="cv-text">
+                <h3 data-km="មិនទាន់ឃើញការងារស័ក្តិសមមែនទេ?" data-en="Haven't Found the Right Job Yet?">មិនទាន់ឃើញការងារស័ក្តិសមមែនទេ?</h3>
+                <p data-km="ផ្ញើប្រវត្តិរូប (CV) របស់អ្នកមកកាន់ភ្នាក់ងារ ហួកាំងថារ៉ា ដើម្បីទទួលការទាក់ទងនៅពេលមានឱកាសថ្មីៗ!" data-en="Submit your resume to Huokaing Thara Recruitment, and our team will match you with upcoming positions!">ផ្ញើប្រវត្តិរូប (CV) របស់អ្នកមកកាន់ភ្នាក់ងារ ហួកាំងថារ៉ា ដើម្បីទទួលការទាក់ទងនៅពេលមានឱកាសថ្មីៗ!</p>
+            </div>
+            <form id="quick-cv-form" class="cv-inline-form">
+                <input type="text" placeholder="ឈ្មោះ / Full Name" required>
+                <input type="tel" placeholder="ទូរស័ព្ទ / Phone Number" required>
+                <input type="file" accept=".pdf,.doc,.docx" required>
+                <button type="submit" class="btn btn-gold" data-km="ផ្ញើ CV ឥឡូវនេះ" data-en="Submit Resume">ផ្ញើ CV ឥឡូវនេះ</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Quick Application Modal -->
+    <div id="job-modal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close" id="close-modal-btn">&times;</button>
+            <div class="modal-header">
+                <h3 id="m-job-title">Job Title</h3>
+                <p id="m-job-meta" class="meta-sub"></p>
+            </div>
+
+            <form id="modal-apply-form" class="modal-form">
+                <div class="input-field">
+                    <label data-km="ឈ្មោះពេញ" data-en="Full Name">ឈ្មោះពេញ</label>
+                    <input type="text" required placeholder="John Doe">
+                </div>
+                <div class="input-field">
+                    <label data-km="លេខទូរស័ព្ទ ឬ Telegram" data-en="Phone or Telegram">លេខទូរស័ព្ទ ឬ Telegram</label>
+                    <input type="text" required placeholder="012 345 678">
+                </div>
+                <div class="input-field">
+                    <label data-km="ភ្ជាប់ប្រវត្តិរូបសង្ខេប (CV)" data-en="Attach Resume (PDF/Word)">ភ្ជាប់ប្រវត្តិរូបសង្ខេប (CV)</label>
+                    <input type="file" accept=".pdf,.doc,.docx" required>
+                </div>
+                <button type="submit" class="btn btn-gold btn-full" data-km="ផ្ញើពាក្យសុំធ្វើការ" data-en="Confirm Application">ផ្ញើពាក្យសុំធ្វើការ</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Huokaing Thara Recruitment Agency. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
